@@ -74,7 +74,7 @@ class OperatorsActivity : AppCompatActivity() {
     }
 
     fun startSeriesNetworkCallsActivity(view: View) {
-        startActivity(Intent(this@MainActivity, SeriesNetworkCallsActivity::class.java))
+        startActivity(Intent(this, SeriesNetworkCallsActivity::class.java))
     }
 //
 //    fun startParallelNetworkCallsActivity(view: View) {
