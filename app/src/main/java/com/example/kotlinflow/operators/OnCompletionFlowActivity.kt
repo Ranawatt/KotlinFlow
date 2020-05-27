@@ -34,6 +34,5 @@ class OnCompletionFlowActivity : AppCompatActivity() {
 
     private fun setupFlow() {
         flowOne = flowOf1("Himanshu", "Amit", "Janishar").flowOn(Dispatchers.Default)
-
     }
 }

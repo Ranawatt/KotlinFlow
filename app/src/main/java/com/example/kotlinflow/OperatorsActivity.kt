@@ -16,16 +16,16 @@ class OperatorsActivity : AppCompatActivity() {
     fun startSimpleActivity(view: View?) =
         startActivity(Intent(this, SimpleFlowActivity::class.java))
 
+    // To Zip the string sequentially
     fun startZipActivity(view: View?) = startActivity(Intent(this, ZipFlowActivity::class.java))
 
-
+    // To remove the duplicate string value
     fun startDistinctUntilChangedActivity(view: View?) =
         startActivity(Intent(this, DistinctUntilChangedFlowActivity::class.java))
-
-
+    // After emit the whole list it will append given value to the list
     fun startOnCompletionActivity(view: View?) =
         startActivity(Intent(this, OnCompletionFlowActivity::class.java))
-
+    // To map the value with given input
     fun startFlatMapConcatActivity(view: View) =
         startActivity(Intent(this, FlatMapConcatFlowActivity::class.java))
 
@@ -68,4 +68,52 @@ class OperatorsActivity : AppCompatActivity() {
 
     fun startOnStartActivity(view: View) =
         startActivity(Intent(this, OnStartFlowActivity::class.java))
+
+    fun startSingleNetworkCallActivity(view: View) {
+        startActivity(Intent(this, SingleNetworkCallActivity::class.java))
+    }
+
+    fun startSeriesNetworkCallsActivity(view: View) {
+        startActivity(Intent(this@MainActivity, SeriesNetworkCallsActivity::class.java))
+    }
+//
+//    fun startParallelNetworkCallsActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, ParallelNetworkCallsActivity::class.java))
+//    }
+//
+//    fun startRoomDatabaseActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, RoomDBActivity::class.java))
+//    }
+//
+//    fun startCatchActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, CatchActivity::class.java))
+//    }
+//
+//    fun startEmitAllActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, EmitAllActivity::class.java))
+//    }
+//
+//    fun startCompletionActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, CompletionActivity::class.java))
+//    }
+//
+//    fun startLongRunningTaskActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, LongRunningTaskActivity::class.java))
+//    }
+//
+//    fun startTwoLongRunningTasksActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, TwoLongRunningTasksActivity::class.java))
+//    }
+//
+//    fun startFilterActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, FilterActivity::class.java))
+//    }
+//
+//    fun startReduceActivity(view: View) {
+//        startActivity(Intent(this@MainActivity, ReduceActivity::class.java))
+//    }
+//
+//    fun startSearchActivity(view: View) {
+//        startActivity(Intent(this, SearchActivity::class.java))
+//    }
 }
