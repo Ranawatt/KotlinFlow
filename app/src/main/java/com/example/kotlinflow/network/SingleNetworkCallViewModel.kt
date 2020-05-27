@@ -1,5 +1,7 @@
 package com.example.kotlinflow.network
 
+import androidx.lifecycle.ViewModel
+
 class SingleNetworkCallViewModel(
     private val apiHelper: ApiHelper,
     private val dbHelper: DatabaseHelper
