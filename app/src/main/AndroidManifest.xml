@@ -19,57 +19,57 @@
 
         <activity
             android:name=".operators.FlatMapMergeFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".operators.FlattenConcatFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".operators.OnStartFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
         <activity
             android:name=".operators.DistinctUntilChangedFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
 
 
         <activity
             android:name=".operators.FlatMapConcatFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
         <activity
             android:name=".operators.FilterFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullUser" />
         <activity
             android:name=".operators.ZipFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".operators.MergeFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
         <activity
             android:name=".operators.FlattenMergeFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullUser" />
         <activity
             android:name=".operators.TransformLatestFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".operators.FlatMapLatestFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
         <activity
             android:name=".operators.FilterNotFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".operators.FilterIsInstanceFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullUser" />
         <activity
             android:name=".operators.FilterNotNullFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".operators.MapFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
         <activity
             android:name=".operators.ScanReduceFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".operators.OnCompletionFlowActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
     </application>
 
 </manifest>
