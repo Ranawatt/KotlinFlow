@@ -1,5 +1,7 @@
 package com.example.kotlinflow.data.api
 
+import kotlinx.coroutines.flow.Flow
+
 interface ApiHelper {
 
     fun getUsers(): Flow<List<ApiUser>>
