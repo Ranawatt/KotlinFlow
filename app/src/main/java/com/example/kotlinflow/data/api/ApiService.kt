@@ -1,5 +1,6 @@
 package com.example.kotlinflow.data.api
 
+import com.example.kotlinflow.data.model.ApiUser
 import retrofit2.http.GET
 
 interface ApiService {

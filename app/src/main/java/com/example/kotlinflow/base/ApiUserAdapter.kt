@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.kotlinflow.R
+import com.example.kotlinflow.data.model.ApiUser
+import kotlinx.android.synthetic.main.item_layout.view.*
 
 class ApiUserAdapter(
     private val users: ArrayList<ApiUser>

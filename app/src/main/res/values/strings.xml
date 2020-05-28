@@ -32,4 +32,17 @@
     <string name="distinct_until_changed">Distinct Until Changed</string>
     <string name="on_completion">On Completion</string>
     <string name="on_start">on Start</string>
+
+    <string name="single_network_call">Single Network Call</string>
+    <string name="series_network_calls">Series Network Calls</string>
+    <string name="parallel_network_calls">Parallel Network Calls</string>
+    <string name="room_database">Room Database</string>
+    <string name="timeout">Timeout</string>
+    <string name="catch_error">Catch Error</string>
+    <string name="emit_all_error">EmitAll Error</string>
+    <string name="completion">Completion</string>
+    <string name="long_running_task">Long Running Task</string>
+    <string name="two_long_running_tasks">Two Long Running Tasks</string>
+    <string name="reduce">Reduce</string>
+
 </resources>

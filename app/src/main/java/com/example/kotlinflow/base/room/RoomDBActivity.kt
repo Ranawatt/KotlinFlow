@@ -1,4 +1,4 @@
-package com.example.kotlinflow.network
+package com.example.kotlinflow.base.room
 
 import android.os.Bundle
 import android.view.View
@@ -9,20 +9,20 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinflow.R
-import com.example.kotlinflow.base.ApiUserAdapter
+import com.example.kotlinflow.base.UserAdapter
 import com.example.kotlinflow.data.api.ApiHelperImpl
 import com.example.kotlinflow.data.api.RetrofitBuilder
 import com.example.kotlinflow.data.local.DatabaseBuilder
 import com.example.kotlinflow.data.local.DatabaseHelperImpl
-import com.example.kotlinflow.data.model.ApiUser
+import com.example.kotlinflow.data.local.entity.User
 import com.example.kotlinflow.utils.Status
 import com.example.kotlinflow.utils.ViewModelFactory
 import kotlinx.android.synthetic.main.activity_single_network_call.*
 
-class SeriesNetworkCallsActivity : AppCompatActivity() {
+class RoomDBActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: SeriesNetworkCallsViewModel
-    private lateinit var adapter: ApiUserAdapter
+    private lateinit var viewModel: RoomDBViewModel
+    private lateinit var adapter: UserAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class SeriesNetworkCallsActivity : AppCompatActivity() {
     private fun setupUI() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter =
-            ApiUserAdapter(
+            UserAdapter(
                 arrayListOf()
             )
         recyclerView.addItemDecoration(
@@ -68,7 +68,7 @@ class SeriesNetworkCallsActivity : AppCompatActivity() {
         })
     }
 
-    private fun renderList(users: List<ApiUser>) {
+    private fun renderList(users: List<User>) {
         adapter.addData(users)
         adapter.notifyDataSetChanged()
     }
@@ -80,6 +80,6 @@ class SeriesNetworkCallsActivity : AppCompatActivity() {
                 ApiHelperImpl(RetrofitBuilder.apiService),
                 DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
             )
-        ).get(SeriesNetworkCallsViewModel::class.java)
+        ).get(RoomDBViewModel::class.java)
     }
 }

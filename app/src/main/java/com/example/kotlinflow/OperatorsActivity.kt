@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.kotlinflow.network.SeriesNetworkCallsActivity
 import com.example.kotlinflow.network.SingleNetworkCallActivity
 import com.example.kotlinflow.operators.*
 
@@ -71,11 +72,11 @@ class OperatorsActivity : AppCompatActivity() {
         startActivity(Intent(this, OnStartFlowActivity::class.java))
 
     fun startSingleNetworkCallActivity(view: View) {
-        startActivity(Intent(this, SingleNetworkCallActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, SingleNetworkCallActivity::class.java))
     }
 
     fun startSeriesNetworkCallsActivity(view: View) {
-        startActivity(Intent(this, SeriesNetworkCallsActivity::class.java))
+        startActivity(Intent(this@OperatorsActivity, SeriesNetworkCallsActivity::class.java))
     }
 //
 //    fun startParallelNetworkCallsActivity(view: View) {

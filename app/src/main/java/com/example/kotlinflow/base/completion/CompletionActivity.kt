@@ -8,6 +8,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.kotlinflow.R
 import com.example.kotlinflow.base.ApiUserAdapter
+import com.example.kotlinflow.data.api.ApiHelperImpl
+import com.example.kotlinflow.data.api.RetrofitBuilder
+import com.example.kotlinflow.data.local.DatabaseBuilder
+import com.example.kotlinflow.data.local.DatabaseHelperImpl
+import com.example.kotlinflow.utils.Status
+import com.example.kotlinflow.utils.ViewModelFactory
+import kotlinx.android.synthetic.main.activity_example.*
 import kotlinx.android.synthetic.main.activity_single_network_call.*
 
 class CompletionActivity : AppCompatActivity() {
@@ -38,6 +45,7 @@ class CompletionActivity : AppCompatActivity() {
                     //Handle Error
                     progressBar.visibility = View.GONE
                     Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+
                 }
             }
         })

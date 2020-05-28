@@ -3,6 +3,16 @@ package com.example.kotlinflow.network
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.kotlinflow.data.api.ApiHelper
+import com.example.kotlinflow.data.local.DatabaseHelper
+import com.example.kotlinflow.data.model.ApiUser
+import com.example.kotlinflow.utils.Resource
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.zip
+import kotlinx.coroutines.launch
 
 class ParallelNetworkCallsViewModel(
     private val apiHelper: ApiHelper,
@@ -29,9 +39,9 @@ class ParallelNetworkCallsViewModel(
                 .catch { e ->
                     users.postValue(Resource.error(e.toString(), null))
                 }
-                .collect {
-                    users.postValue(Resource.success(it))
-                }
+//                .collect {
+//                    users.postValue(Resource.success(it))
+//                }
         }
     }
 

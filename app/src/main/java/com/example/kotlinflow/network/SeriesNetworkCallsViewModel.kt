@@ -1,8 +1,18 @@
 package com.example.kotlinflow.network
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.kotlinflow.data.api.ApiHelper
+import com.example.kotlinflow.data.local.DatabaseHelper
+import com.example.kotlinflow.data.model.ApiUser
+import com.example.kotlinflow.utils.Resource
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.flatMapConcat
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.launch
 
 class SeriesNetworkCallsViewModel(
     private val apiHelper: ApiHelper,
@@ -28,10 +38,10 @@ class SeriesNetworkCallsViewModel(
                 .catch { e ->
                     users.postValue(Resource.error(e.toString(), null))
                 }
-                .collect { moreUsersFromApi ->
-                    allUsersFromApi.addAll(moreUsersFromApi)
-                    users.postValue(Resource.success(allUsersFromApi))
-                }
+//                .collect { moreUsersFromApi ->
+//                    allUsersFromApi.addAll(moreUsersFromApi)
+//                    users.postValue(Resource.success(allUsersFromApi))
+//                }
         }
     }
 

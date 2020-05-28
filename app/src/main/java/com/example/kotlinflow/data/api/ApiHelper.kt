@@ -1,5 +1,6 @@
 package com.example.kotlinflow.data.api
 
+import com.example.kotlinflow.data.model.ApiUser
 import kotlinx.coroutines.flow.Flow
 
 interface ApiHelper {
