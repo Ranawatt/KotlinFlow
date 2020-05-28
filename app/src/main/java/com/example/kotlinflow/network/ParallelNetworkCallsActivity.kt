@@ -11,7 +11,7 @@ class ParallelNetworkCallsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_recycler_view)
+        setContentView(R.layout.activity_single_network_call)
         setupUI()
         setupViewModel()
         setupObserver()
