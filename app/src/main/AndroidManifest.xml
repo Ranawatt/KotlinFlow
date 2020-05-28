@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".base.completion.CompletionActivity"></activity>
+        <activity android:name=".base.errorhandling.emitall.EmitAllActivity"></activity>
+        <activity android:name=".base.completion.CompletionActivity" />
         <activity android:name=".network.SingleNetworkCallActivity" />
         <activity android:name=".OperatorsActivity">
             <intent-filter>
