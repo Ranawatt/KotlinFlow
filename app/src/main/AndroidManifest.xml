@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kotlinflow">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".base.errorhandling.emitall.EmitAllActivity"></activity>
         <activity android:name=".base.completion.CompletionActivity" />
         <activity android:name=".network.SingleNetworkCallActivity" />
         <activity android:name=".OperatorsActivity">
