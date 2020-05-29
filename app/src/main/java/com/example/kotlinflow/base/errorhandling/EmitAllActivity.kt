@@ -34,13 +34,9 @@ class EmitAllActivity : AppCompatActivity() {
 
     private fun setupUI() {
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter =
-            ApiUserAdapter(
-                arrayListOf()
-            )
+        adapter = ApiUserAdapter(arrayListOf())
         recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                recyclerView.context,
+            DividerItemDecoration(recyclerView.context,
                 (recyclerView.layoutManager as LinearLayoutManager).orientation
             )
         )
