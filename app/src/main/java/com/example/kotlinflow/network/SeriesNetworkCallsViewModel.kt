@@ -10,6 +10,7 @@ import com.example.kotlinflow.data.model.ApiUser
 import com.example.kotlinflow.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flatMapConcat
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
@@ -38,10 +39,10 @@ class SeriesNetworkCallsViewModel(
                 .catch { e ->
                     users.postValue(Resource.error(e.toString(), null))
                 }
-//                .collect { moreUsersFromApi ->
-//                    allUsersFromApi.addAll(moreUsersFromApi)
-//                    users.postValue(Resource.success(allUsersFromApi))
-//                }
+                .collect { moreUsersFromApi ->
+                    allUsersFromApi.addAll(moreUsersFromApi)
+                    users.postValue(Resource.success(allUsersFromApi))
+                }
         }
     }
 

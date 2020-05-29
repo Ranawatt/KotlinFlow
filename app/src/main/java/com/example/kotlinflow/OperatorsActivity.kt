@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.kotlinflow.base.room.RoomDBActivity
+import com.example.kotlinflow.network.ParallelNetworkCallsActivity
 import com.example.kotlinflow.network.SeriesNetworkCallsActivity
 import com.example.kotlinflow.network.SingleNetworkCallActivity
 import com.example.kotlinflow.operators.*
@@ -78,14 +80,14 @@ class OperatorsActivity : AppCompatActivity() {
     fun startSeriesNetworkCallsActivity(view: View) {
         startActivity(Intent(this@OperatorsActivity, SeriesNetworkCallsActivity::class.java))
     }
-//
-//    fun startParallelNetworkCallsActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, ParallelNetworkCallsActivity::class.java))
-//    }
-//
-//    fun startRoomDatabaseActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, RoomDBActivity::class.java))
-//    }
+
+    fun startParallelNetworkCallsActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, ParallelNetworkCallsActivity::class.java))
+    }
+
+    fun startRoomDatabaseActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, RoomDBActivity::class.java))
+    }
 //
 //    fun startCatchActivity(view: View) {
 //        startActivity(Intent(this@MainActivity, CatchActivity::class.java))
