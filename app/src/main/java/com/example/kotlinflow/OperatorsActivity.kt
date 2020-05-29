@@ -4,8 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.kotlinflow.base.errorhandling.CatchActivity
 import com.example.kotlinflow.base.errorhandling.EmitAllActivity
 import com.example.kotlinflow.base.room.RoomDBActivity
+import com.example.kotlinflow.base.task.LongRunningTaskActivity
 import com.example.kotlinflow.network.ParallelNetworkCallsActivity
 import com.example.kotlinflow.network.SeriesNetworkCallsActivity
 import com.example.kotlinflow.network.SingleNetworkCallActivity
@@ -90,9 +92,9 @@ class OperatorsActivity : AppCompatActivity() {
         startActivity(Intent(this@OperatorsActivity, RoomDBActivity::class.java))
     }
 
-//    fun startCatchActivity(view: View) {
-//        startActivity(Intent(this@OperatorsActivity, CatchActivity::class.java))
-//    }
+    fun startCatchActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, CatchActivity::class.java))
+    }
 
     fun startEmitAllActivity(view: View) {
         startActivity(Intent(this@OperatorsActivity, EmitAllActivity::class.java))
@@ -101,10 +103,10 @@ class OperatorsActivity : AppCompatActivity() {
 //    fun startCompletionActivity(view: View) {
 //        startActivity(Intent(this@MainActivity, CompletionActivity::class.java))
 //    }
-//
-//    fun startLongRunningTaskActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, LongRunningTaskActivity::class.java))
-//    }
+
+    fun startLongRunningTaskActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, LongRunningTaskActivity::class.java))
+    }
 //
 //    fun startTwoLongRunningTasksActivity(view: View) {
 //        startActivity(Intent(this@MainActivity, TwoLongRunningTasksActivity::class.java))

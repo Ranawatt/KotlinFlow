@@ -32,7 +32,6 @@ class CatchViewModel(
             }.collect {
                 users.postValue(Resource.success(it))
             }
-
         }
     }
 

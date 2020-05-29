@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.kotlinflow.data.api.ApiHelper
 import com.example.kotlinflow.data.local.DatabaseHelper
 import com.example.kotlinflow.data.model.ApiUser
 import com.example.kotlinflow.utils.Resource
@@ -17,7 +18,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 
 class LongRunningTaskViewModel(
-    private val apiUser: ApiUser,
+    private val apiHelper: ApiHelper,
     private val databaseHelper: DatabaseHelper): ViewModel() {
 
     private val status = MutableLiveData<Resource<String>>()

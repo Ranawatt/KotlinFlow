@@ -171,12 +171,12 @@
             android:text="@string/room_database"
             android:textColor="@android:color/black" />
 
-<!--        <Button-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:onClick="startCatchActivity"-->
-<!--            android:text="@string/catch_error"-->
-<!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startCatchActivity"
+            android:text="@string/catch_error"
+            android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
@@ -192,12 +192,12 @@
 <!--            android:text="@string/completion"-->
 <!--            android:textColor="@android:color/black" />-->
 
-<!--        <Button-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:onClick="startLongRunningTaskActivity"-->
-<!--            android:text="@string/long_running_task"-->
-<!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startLongRunningTaskActivity"
+            android:text="@string/long_running_task"
+            android:textColor="@android:color/black" />
 
 <!--        <Button-->
 <!--            android:layout_width="match_parent"-->

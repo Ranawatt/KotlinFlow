@@ -53,7 +53,7 @@ class CatchActivity : AppCompatActivity() {
                     recyclerView.visibility = View.GONE
                 }
                 Status.ERROR -> {
-                    progressBar.visibility =View.GONE
+                    progressBar.visibility = View.GONE
                     Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
                 }
             }
