@@ -15,6 +15,7 @@
         <activity android:name=".network.SeriesNetworkCallsActivity" />
         <activity android:name=".network.ParallelNetworkCallsActivity" />
         <activity android:name=".base.room.RoomDBActivity" />
+        <activity android:name=".base.errorhandling.EmitAllActivity"/>
         <activity android:name=".OperatorsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

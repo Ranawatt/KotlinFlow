@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.kotlinflow.base.errorhandling.EmitAllActivity
 import com.example.kotlinflow.base.room.RoomDBActivity
 import com.example.kotlinflow.network.ParallelNetworkCallsActivity
 import com.example.kotlinflow.network.SeriesNetworkCallsActivity
@@ -88,14 +89,14 @@ class OperatorsActivity : AppCompatActivity() {
     fun startRoomDatabaseActivity(view: View) {
         startActivity(Intent(this@OperatorsActivity, RoomDBActivity::class.java))
     }
-//
+
 //    fun startCatchActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, CatchActivity::class.java))
+//        startActivity(Intent(this@OperatorsActivity, CatchActivity::class.java))
 //    }
-//
-//    fun startEmitAllActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, EmitAllActivity::class.java))
-//    }
+
+    fun startEmitAllActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, EmitAllActivity::class.java))
+    }
 //
 //    fun startCompletionActivity(view: View) {
 //        startActivity(Intent(this@MainActivity, CompletionActivity::class.java))

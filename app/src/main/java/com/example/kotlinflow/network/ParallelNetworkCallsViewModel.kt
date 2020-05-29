@@ -10,6 +10,7 @@ import com.example.kotlinflow.data.model.ApiUser
 import com.example.kotlinflow.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.zip
 import kotlinx.coroutines.launch
@@ -39,9 +40,9 @@ class ParallelNetworkCallsViewModel(
                 .catch { e ->
                     users.postValue(Resource.error(e.toString(), null))
                 }
-//                .collect {
-//                    users.postValue(Resource.success(it))
-//                }
+                .collect {
+                    users.postValue(Resource.success(it))
+                }
         }
     }
 
