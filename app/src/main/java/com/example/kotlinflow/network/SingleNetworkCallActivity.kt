@@ -33,13 +33,9 @@ class SingleNetworkCallActivity : AppCompatActivity() {
     }
     private fun setupUI() {
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter =
-            ApiUserAdapter(
-                arrayListOf()
-            )
+        adapter = ApiUserAdapter(arrayListOf())
         recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                recyclerView.context,
+            DividerItemDecoration(recyclerView.context,
                 (recyclerView.layoutManager as LinearLayoutManager).orientation
             )
         )
@@ -73,8 +69,7 @@ class SingleNetworkCallActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        viewModel = ViewModelProviders.of(
-            this,
+        viewModel = ViewModelProviders.of(this,
             ViewModelFactory(
                 ApiHelperImpl(RetrofitBuilder.apiService),
                 DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
