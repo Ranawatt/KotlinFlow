@@ -8,6 +8,7 @@ import com.example.kotlinflow.base.errorhandling.CatchActivity
 import com.example.kotlinflow.base.errorhandling.EmitAllActivity
 import com.example.kotlinflow.base.room.RoomDBActivity
 import com.example.kotlinflow.base.task.LongRunningTaskActivity
+import com.example.kotlinflow.base.task.TwoLongRunningTaskActivity
 import com.example.kotlinflow.network.ParallelNetworkCallsActivity
 import com.example.kotlinflow.network.SeriesNetworkCallsActivity
 import com.example.kotlinflow.network.SingleNetworkCallActivity
@@ -107,10 +108,10 @@ class OperatorsActivity : AppCompatActivity() {
     fun startLongRunningTaskActivity(view: View) {
         startActivity(Intent(this@OperatorsActivity, LongRunningTaskActivity::class.java))
     }
-//
-//    fun startTwoLongRunningTasksActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, TwoLongRunningTasksActivity::class.java))
-//    }
+
+    fun startTwoLongRunningTasksActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, TwoLongRunningTaskActivity::class.java))
+    }
 //
 //    fun startFilterActivity(view: View) {
 //        startActivity(Intent(this@MainActivity, FilterActivity::class.java))
