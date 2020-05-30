@@ -51,5 +51,6 @@ class TwoLongRunningTaskActivity : AppCompatActivity() {
                 }
             }
         })
+        viewmodel.startLongRunningTask()
     }
 }

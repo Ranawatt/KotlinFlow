@@ -7,6 +7,7 @@ import com.example.kotlinflow.base.errorhandling.CatchViewModel
 import com.example.kotlinflow.base.errorhandling.EmitAllViewModel
 import com.example.kotlinflow.base.room.RoomDBViewModel
 import com.example.kotlinflow.base.task.LongRunningTaskViewModel
+import com.example.kotlinflow.base.task.TwoLongRunningTaskViewModel
 import com.example.kotlinflow.data.api.ApiHelper
 import com.example.kotlinflow.data.local.DatabaseHelper
 import com.example.kotlinflow.network.ParallelNetworkCallsViewModel
@@ -38,9 +39,9 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
         if (modelClass.isAssignableFrom(LongRunningTaskViewModel::class.java)) {
             return LongRunningTaskViewModel(apiHelper, dbHelper) as T
         }
-//        if (modelClass.isAssignableFrom(TwoLongRunningTasksViewModel::class.java)) {
-//            return TwoLongRunningTasksViewModel(apiHelper, dbHelper) as T
-//        }
+        if (modelClass.isAssignableFrom(TwoLongRunningTaskViewModel::class.java)) {
+            return TwoLongRunningTaskViewModel(apiHelper, dbHelper) as T
+        }
         if (modelClass.isAssignableFrom(CompletionViewModel::class.java)) {
             return CompletionViewModel(apiHelper, dbHelper) as T
         }
