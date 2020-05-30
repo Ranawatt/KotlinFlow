@@ -15,8 +15,8 @@ import kotlinx.coroutines.launch
 
 class CatchViewModel(
     private val apiHelper: ApiHelper,
-    private val dbHelper: DatabaseHelper)
-    :ViewModel() {
+    private val dbHelper: DatabaseHelper
+): ViewModel() {
 
     private val users = MutableLiveData<Resource<List<ApiUser>>>()
 

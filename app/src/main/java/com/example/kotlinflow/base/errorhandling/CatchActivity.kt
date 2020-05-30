@@ -41,6 +41,20 @@ class CatchActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
+        viewmodel= ViewModelProviders.of(this,
+            ViewModelFactory(
+                ApiHelperImpl(RetrofitBuilder.apiService),
+                DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
+            )
+        ).get(CatchViewModel::class.java)
+    }
+
+    private fun renderList(users: List<ApiUser>) {
+        adapter.addData(users)
+        adapter.notifyDataSetChanged()
+    }
+
+    private fun setupObserver() {
         viewmodel.getUsers().observe(this, Observer {
             when(it.status){
                 Status.SUCCESS -> {
@@ -58,19 +72,6 @@ class CatchActivity : AppCompatActivity() {
                 }
             }
         })
-    }
-
-    private fun renderList(users: List<ApiUser>) {
-        adapter.addData(users)
-        adapter.notifyDataSetChanged()
-    }
-
-    private fun setupObserver() {
-        viewmodel = ViewModelProviders.of(this,
-            ViewModelFactory(
-                ApiHelperImpl(RetrofitBuilder.apiService),
-                DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
-            )).get(CatchViewModel::class.java)
     }
 
 }

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".base.task.TwoLongRunningTaskActivity"></activity>
+        <activity android:name=".base.search.SearchActivity"></activity>
+        <activity android:name=".base.task.TwoLongRunningTaskActivity" />
         <activity android:name=".base.task.LongRunningTaskActivity" />
         <activity android:name=".base.errorhandling.CatchActivity" />
         <activity android:name=".base.completion.CompletionActivity" />
