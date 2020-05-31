@@ -50,5 +50,6 @@ class FilterActivity : AppCompatActivity(){
                 }
             }
         })
+        viewmodel.startFilterTask()
     }
 }
