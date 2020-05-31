@@ -4,9 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.kotlinflow.base.completion.CompletionActivity
 import com.example.kotlinflow.base.errorhandling.CatchActivity
 import com.example.kotlinflow.base.errorhandling.EmitAllActivity
 import com.example.kotlinflow.base.room.RoomDBActivity
+import com.example.kotlinflow.base.search.SearchActivity
 import com.example.kotlinflow.base.task.LongRunningTaskActivity
 import com.example.kotlinflow.base.task.TwoLongRunningTaskActivity
 import com.example.kotlinflow.network.ParallelNetworkCallsActivity
@@ -100,10 +102,10 @@ class OperatorsActivity : AppCompatActivity() {
     fun startEmitAllActivity(view: View) {
         startActivity(Intent(this@OperatorsActivity, EmitAllActivity::class.java))
     }
-//
-//    fun startCompletionActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, CompletionActivity::class.java))
-//    }
+
+    fun startCompletionActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, CompletionActivity::class.java))
+    }
 
     fun startLongRunningTaskActivity(view: View) {
         startActivity(Intent(this@OperatorsActivity, LongRunningTaskActivity::class.java))
@@ -120,8 +122,8 @@ class OperatorsActivity : AppCompatActivity() {
 //    fun startReduceActivity(view: View) {
 //        startActivity(Intent(this@MainActivity, ReduceActivity::class.java))
 //    }
-//
-//    fun startSearchActivity(view: View) {
-//        startActivity(Intent(this, SearchActivity::class.java))
-//    }
+
+    fun startSearchActivity(view: View) {
+        startActivity(Intent(this, SearchActivity::class.java))
+    }
 }

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.SearchView
 import com.example.kotlinflow.R
-import com.example.kotlinflow.utils.getQueryTextChangeStateFlow
 import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
@@ -29,7 +28,7 @@ class SearchActivity : AppCompatActivity(), CoroutineScope {
         super.onDestroy()
     }
 
-    private fun setUpSearchStateFlow() {
+    private fun setupSearchStateFlow() {
         launch {
             searchView.getQueryTextChangeStateFlow()
                 .debounce(300)
