@@ -117,9 +117,9 @@ class OperatorsActivity : AppCompatActivity() {
         startActivity(Intent(this@OperatorsActivity, FilterActivity::class.java))
     }
 
-//    fun startReduceActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, ReduceActivity::class.java))
-//    }
+    fun startReduceActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, ReduceActivity::class.java))
+    }
 
     fun startSearchActivity(view: View) {
         startActivity(Intent(this, SearchActivity::class.java))
