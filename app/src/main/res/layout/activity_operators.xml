@@ -185,12 +185,12 @@
             android:text="@string/emit_all_error"
             android:textColor="@android:color/black" />
 
-<!--        <Button-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:onClick="startCompletionActivity"-->
-<!--            android:text="@string/completion"-->
-<!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startCompletionActivity"
+            android:text="@string/completion"
+            android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
@@ -207,12 +207,12 @@
             android:textColor="@android:color/black" />
 
 
-<!--        <Button-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:onClick="startReduceActivity"-->
-<!--            android:text="@string/reduce"-->
-<!--            android:textColor="@android:color/black" />-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startReduceActivity"
+            android:text="@string/reduce"
+            android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"

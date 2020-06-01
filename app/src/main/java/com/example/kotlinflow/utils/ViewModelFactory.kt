@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.kotlinflow.base.completion.CompletionViewModel
 import com.example.kotlinflow.base.errorhandling.CatchViewModel
 import com.example.kotlinflow.base.errorhandling.EmitAllViewModel
+import com.example.kotlinflow.base.filter.FilterViewModel
+import com.example.kotlinflow.base.reduce.ReduceViewModel
 import com.example.kotlinflow.base.room.RoomDBViewModel
 import com.example.kotlinflow.base.task.LongRunningTaskViewModel
 import com.example.kotlinflow.base.task.TwoLongRunningTaskViewModel
@@ -45,15 +47,15 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
         if (modelClass.isAssignableFrom(CompletionViewModel::class.java)) {
             return CompletionViewModel(apiHelper, dbHelper) as T
         }
-//        if (modelClass.isAssignableFrom(FilterViewModel::class.java)) {
-//            return FilterViewModel(apiHelper, dbHelper) as T
-//        }
+        if (modelClass.isAssignableFrom(FilterViewModel::class.java)) {
+            return FilterViewModel(apiHelper, dbHelper) as T
+        }
 //        if (modelClass.isAssignableFrom(MapViewModel::class.java)) {
 //            return MapViewModel(apiHelper, dbHelper) as T
 //        }
-//        if (modelClass.isAssignableFrom(ReduceViewModel::class.java)) {
-//            return ReduceViewModel(apiHelper, dbHelper) as T
-//        }
+        if (modelClass.isAssignableFrom(ReduceViewModel::class.java)) {
+            return ReduceViewModel(apiHelper, dbHelper) as T
+        }
         throw IllegalArgumentException("Unknown class name")
     }
 

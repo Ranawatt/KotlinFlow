@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".base.reduce.ReduceActivity"></activity>
+        <activity android:name=".base.filter.FilterActivity"></activity>
         <activity android:name=".base.search.SearchActivity"></activity>
         <activity android:name=".base.task.TwoLongRunningTaskActivity" />
         <activity android:name=".base.task.LongRunningTaskActivity" />

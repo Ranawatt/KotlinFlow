@@ -8,6 +8,7 @@ import com.example.kotlinflow.base.completion.CompletionActivity
 import com.example.kotlinflow.base.errorhandling.CatchActivity
 import com.example.kotlinflow.base.errorhandling.EmitAllActivity
 import com.example.kotlinflow.base.filter.FilterActivity
+import com.example.kotlinflow.base.reduce.ReduceActivity
 import com.example.kotlinflow.base.room.RoomDBActivity
 import com.example.kotlinflow.base.search.SearchActivity
 import com.example.kotlinflow.base.task.LongRunningTaskActivity
@@ -24,14 +25,14 @@ class OperatorsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_operators)
     }
 
-    fun startSimpleActivity(view: View?) =
+    fun startSimpleActivity() =
         startActivity(Intent(this, SimpleFlowActivity::class.java))
 
     // To Zip the string sequentially
     fun startZipActivity(view: View?) = startActivity(Intent(this, ZipFlowActivity::class.java))
 
     // To remove the duplicate string value
-    fun startDistinctUntilChangedActivity(view: View?) =
+    fun startDistinctUntilChangedActivity() =
         startActivity(Intent(this, DistinctUntilChangedFlowActivity::class.java))
     // After emit the whole list it will append given value to the list
     fun startOnCompletionActivity(view: View?) =
