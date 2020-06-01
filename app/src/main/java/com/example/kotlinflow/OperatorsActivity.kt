@@ -7,6 +7,7 @@ import android.view.View
 import com.example.kotlinflow.base.completion.CompletionActivity
 import com.example.kotlinflow.base.errorhandling.CatchActivity
 import com.example.kotlinflow.base.errorhandling.EmitAllActivity
+import com.example.kotlinflow.base.filter.FilterActivity
 import com.example.kotlinflow.base.room.RoomDBActivity
 import com.example.kotlinflow.base.search.SearchActivity
 import com.example.kotlinflow.base.task.LongRunningTaskActivity
@@ -56,9 +57,6 @@ class OperatorsActivity : AppCompatActivity() {
 
     fun startFlatMapLatestFlowActivity(view: View) =
         startActivity(Intent(this, FlatMapLatestFlowActivity::class.java))
-
-    fun startFilterActivity(view: View) =
-        startActivity(Intent(this, FilterFlowActivity::class.java))
 
     fun startFilterNotActivity(view: View) =
         startActivity(Intent(this, FilterNotFlowActivity::class.java))
@@ -114,11 +112,11 @@ class OperatorsActivity : AppCompatActivity() {
     fun startTwoLongRunningTasksActivity(view: View) {
         startActivity(Intent(this@OperatorsActivity, TwoLongRunningTaskActivity::class.java))
     }
-//
-//    fun startFilterActivity(view: View) {
-//        startActivity(Intent(this@MainActivity, FilterActivity::class.java))
-//    }
-//
+
+    fun startFilterActivity(view: View) {
+        startActivity(Intent(this@OperatorsActivity, FilterActivity::class.java))
+    }
+
 //    fun startReduceActivity(view: View) {
 //        startActivity(Intent(this@MainActivity, ReduceActivity::class.java))
 //    }
