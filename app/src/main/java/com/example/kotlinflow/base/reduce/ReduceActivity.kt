@@ -50,5 +50,6 @@ class ReduceActivity : AppCompatActivity() {
                 }
             }
         })
+        viewModel.startReduceTask()
     }
 }
