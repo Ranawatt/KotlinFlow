@@ -32,7 +32,7 @@ class OperatorsActivity : AppCompatActivity() {
     fun startZipActivity(view: View?) = startActivity(Intent(this, ZipFlowActivity::class.java))
 
     // To remove the duplicate string value
-    fun startDistinctUntilChangedActivity() =
+    fun startDistinctUntilChangedAct6ivity() =
         startActivity(Intent(this, DistinctUntilChangedFlowActivity::class.java))
     // After emit the whole list it will append given value to the list
     fun startOnCompletionActivity(view: View?) =
